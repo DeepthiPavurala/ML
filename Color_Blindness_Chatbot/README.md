@@ -20,12 +20,17 @@ Additional Functionalities: Users can initiate a color blindness test or request
 ## Examples
 
 Input: User asks, "What is color blindness?"
+
 Output: The chatbot responds with information about color blindness in the user's preferred language.
 
+
 Input: User requests a color blindness test.
+
 Output: The chatbot launches a color blindness test interface, allowing the user to assess their color vision.
 
+
 Input: User requests to identify a color.
+
 Output: The chatbot launches a color identification interface, where users can interactively identify colors.
 
 ## Setup and Execution

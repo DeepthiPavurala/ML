@@ -40,7 +40,7 @@ Input: User requests to identify a color.
 
 Output: The chatbot launches a color identification interface, where users can interactively identify colors.
 
-<img src="Sample_Output/Color_Recognition.png" width="600">
+<img src="Sample_Output/Color_Recognition.jpg" width="600">
 
 ## Setup and Execution
 

@@ -32,7 +32,7 @@ Output: The chatbot launches a color blindness test interface, allowing the user
 
 <img src="Sample_Output/Ishihara.png" width="600">
 
-  Test Result:
+  Test Result:<br>
   <img src="Sample_Output/Test_Result1.png" width="600">
 
 

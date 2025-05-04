@@ -23,15 +23,24 @@ Input: User asks, "What is color blindness?"
 
 Output: The chatbot responds with information about color blindness in the user's preferred language.
 
+<img src="Sample_Output/Chatbot.png" width="600">
+
 
 Input: User requests a color blindness test.
 
 Output: The chatbot launches a color blindness test interface, allowing the user to assess their color vision.
 
+<img src="Sample_Output/Ishihara.png" width="600">
+
+  Test Result:
+  <img src="Sample_Output/Test_Result1.png" width="600">
+
 
 Input: User requests to identify a color.
 
 Output: The chatbot launches a color identification interface, where users can interactively identify colors.
+
+<img src="Sample_Output/Color_Recognition.png" width="600">
 
 ## Setup and Execution
 

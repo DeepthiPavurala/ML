@@ -10,6 +10,10 @@ from gtts import gTTS
 import os
 from playsound import playsound
 from langdetect import detect
+from dotenv import load_dotenv
+
+# Load environment variables from the .env file
+load_dotenv()
 
 
 # spaCy model (one-time execution)
@@ -250,9 +254,10 @@ def get_matched_response(user_input):
 # translate text
 def translate_text(text,input_dest, dest_language="en"):
     """Translate input text to the destination language."""
-    key = "88807704d85a4e74ae21b1c92d697882"
-    endpoint = "https://api.cognitive.microsofttranslator.com/"
-    location = "eastus"
+    key = os.getenv('TRANSLATOR_KEY')
+    endpoint = os.getenv('TRANSLATOR_ENDPOINT')
+    location = os.getenv('TRANSLATOR_LOCATION')
+
 
     path = '/translate'
     constructed_url = endpoint + path
@@ -288,15 +293,14 @@ def get_language_choice(input_text):
         return "hi"
     elif input_text.lower() == "telugu" or input_text == "3":
         return "te"
-    # Add more languages and their corresponding codes here
     else:
         return None
 
 # accept user input and give response
 def send_message():
-    global user_language  # Move the global declaration here
+    global user_language  
     user_input = user_entry.get()
-    user_entry.delete(0, tk.END)  # Clear the input field
+    user_entry.delete(0, tk.END)  
     if not user_input:
         messagebox.showinfo("Error", "Please type something.")
         return
@@ -313,7 +317,7 @@ def send_message():
         if user_name:
             chat_history.insert(tk.END, f"Bella: Nice to meet you, {user_name}! Please select your preferred language.\n")
             speak(f"Nice to meet you, {user_name}! Please select your preferred language.")
-            chat_history.insert(tk.END, "1. English\n2. Hindi\n3. Telugu\n")  # Add more languages as needed
+            chat_history.insert(tk.END, "1. English\n2. Hindi\n3. Telugu\n")  
             chat_history.config(state=tk.DISABLED)
         else:
             chat_history.insert(tk.END, "Bella: I couldn't find your name. Can you tell me again?\n")
